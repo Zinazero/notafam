@@ -1,1 +1,76 @@
 @import 'tailwindcss';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@theme {
+	--color-blue: #1485ff;
+	--color-blue-light: #8eb8e6;
+	--color-purple: #b65bf3;
+	--color-pink: #e83e8c;
+	--color-red: #d41629;
+	--color-orange: #ffb700;
+	--color-yellow: #eec44f;
+	--color-yellow-light: #f3e246;
+	--color-green: #28a745;
+	--color-green-light: #66e686;
+	--color-green-dark: #0f8b2c;
+	--color-teal: #20c997;
+	--color-cyan: #3ec2eb;
+	--color-white: #fff;
+	--color-transparent-grey: rgba(184, 184, 184, 0.5);
+	--color-grey: #6c757d;
+	--color-grey-dark: #343a40;
+	--color-cobalt-hover: #1274ff;
+	--color-cobalt: #0047ab;
+	--color-light: #f6f7f8;
+	--color-dark: #282c31;
+	--color-abyss: #000712;
+	--color-cobalt-light: #4592ff;
+	--color-pastel-green: rgb(104, 240, 133);
+	--color-pastel-yellow: rgb(253, 251, 147);
+	--color-pastel-red: rgb(247, 119, 119);
+	--color-beige: rgb(248, 247, 240);
+	--color-pool: #9cf1f1;
+	--font-poppins: 'Poppins', sans-serif;
+	--color-manager: #eec44f;
+	--color-mes: #b65bf3;
+	--color-ar: #8eb8e6;
+	--color-mea-ft: #1485ff;
+	--color-mea-pt: #3ec2eb;
+	--color-fa-ft: #0f8b2c;
+	--color-fa-pt: #66e686;
+	--color-maintenance: #f3e246;
+	--color-brand: #ce004f;
+	--font-inter: 'Inter', sans-serif;
+	--font-source: 'Source Serif 4', serif;
+}
+
+* {
+	scrollbar-width: none;
+}
+
+body {
+	overflow-x: hidden;
+  @apply font-inter;
+}
+
+p {
+  @apply font-source;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	@apply !text-orange;
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+.three-slide .swiper-slide {
+	transform: scale(0.8);
+	transition: transform 0.3s;
+}
+
+.three-slide .swiper-slide-active {
+	transform: scale(1);
+}
