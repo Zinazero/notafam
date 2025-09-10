@@ -96,6 +96,7 @@ export const App = () => {
 
 	return (
 		<div className='min-h-screen flex flex-col items-center bg-light text-black relative'>
+			<div id='home' />
 			<Header />
 
 			<main className='w-full py-8'>
@@ -135,7 +136,11 @@ export const App = () => {
 					</div>
 				</section>
 
-				<section className='mt-8 max-w-7xl mx-auto' ref={gallerySectionRef}>
+				<section
+					id='gallery'
+					className='mt-8 max-w-7xl mx-auto'
+					ref={gallerySectionRef}
+				>
 					<h2 className='text-2xl font-bold text-center w-full mb-4 text-brand'>
 						Gallery
 					</h2>
@@ -179,7 +184,10 @@ export const App = () => {
 					</div>
 				</section>
 
-				<section className='mt-8 text-center bg-white shadow-md py-10 flex flex-col items-center justify-center'>
+				<section
+					id='about'
+					className='mt-8 text-center bg-white shadow-md py-10 flex flex-col items-center justify-center'
+				>
 					<h2 className='text-4xl text-brand mb-10'>
 						Who am I? No, seriously.
 					</h2>
@@ -203,7 +211,10 @@ export const App = () => {
 					</div>
 				</section>
 
-				<section className='mt-8 text-center shadow-md py-10 flex flex-col items-center justify-center'>
+				<section
+					id='contact'
+					className='mt-8 text-center shadow-md py-10 flex flex-col items-center justify-center'
+				>
 					<h2 className='text-4xl text-brand mb-10'>Hit a Brotha Up</h2>
 					<div className='w-1/5'>
 						<ContactForm handleContactSubmit={(e) => handleContactSubmit(e)} />
