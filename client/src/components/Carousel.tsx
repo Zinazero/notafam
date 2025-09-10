@@ -7,6 +7,7 @@ type Props = {
   className?: string;
   autoplayMs?: number | null;
   slidesToShow?: 1 | 3;
+  onImageClick?: (src: string) => void;
 };
 
 const Carousel = ({
@@ -15,6 +16,7 @@ const Carousel = ({
   className = "",
   autoplayMs = 4000,
   slidesToShow = 1,
+  onImageClick,
 }: Props) => {
   return (
     <div className={`relative rounded-lg bg-light ${className}`}>
@@ -34,7 +36,8 @@ const Carousel = ({
             <img
               src={src}
               alt={`${alt} ${i + 1}`}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg cursor-pointer"
+              onClick={() => onImageClick && onImageClick(src)}
             />
           </SwiperSlide>
         ))}

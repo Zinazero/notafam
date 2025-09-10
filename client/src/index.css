@@ -61,9 +61,19 @@ p {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-	@apply !text-orange;
+  @apply text-transparent-grey;
 	font-size: 3rem;
 	font-weight: 900;
+  @apply transition;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  @apply text-orange;
+}
+
+.swiper-pagination-bullet {
+  @apply !bg-orange;
 }
 
 .three-slide .swiper-slide {
@@ -73,4 +83,9 @@ p {
 
 .three-slide .swiper-slide-active {
 	transform: scale(1);
+}
+
+input,
+textarea {
+  @apply bg-white/90 hover:ring-1 hover:ring-pastel-red focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand rounded-lg py-3 px-4 w-full transition;
 }
